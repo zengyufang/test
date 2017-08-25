@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>充电站</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root ><img src="assets/images/1.jpg" style="min-width:320px;max-width:640px;height:100%;"></app-root>
+  <script>
+    window.onload = function(){
+      setInterval(() => {
+        var a = document.body.getElementsByTagName("title")[0].innerText;
+        document.documentElement.getElementsByTagName("title")[0].innerText = a;
+        if(document.getElementsByClassName("body").length != 0){
+          var screen_height = window.screen.height;
+          var body_height = document.body.scrollHeight;
+          if(screen_height > body_height){
+            document.getElementsByClassName("body")[0].style.height = body_height  + "px";
+          }else{
+            document.getElementsByClassName("body")[0].style.height = screen_height  + "px";
+          }
+          
+        } 
+      },100)
+      
+    }
+    
+  </script>
+</body>
+</html>
