@@ -12,7 +12,7 @@
   <app-root ><img src="assets/images/1.jpg" style="min-width:320px;max-width:640px;height:100%;"></app-root>
   <script>
     window.onload = function(){
-      setInterval(() => {
+      setInterval(function(){
         var a = document.body.getElementsByTagName("title")[0].innerText;
         document.documentElement.getElementsByTagName("title")[0].innerText = a;
         if(document.getElementsByClassName("body").length != 0){
